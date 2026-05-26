@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, Modal,
 import { useState, useRef, useEffect } from 'react';
  
 const supabase = createClient(
-  'https://truceubjgpbearomzlr.supabase.co',
+  'https://truceujbjgpbearomzlr.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydWNldWpiamdwYmVhcm9temxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MjU3ODQsImV4cCI6MjA5MzAwMTc4NH0.xawvE96CGH6xVHn0o1yycH47sHuTS_X7l22Mn7Qv01s',
   { auth: { storage: AsyncStorage, autoRefreshToken: true, persistSession: true, detectSessionInUrl: false } }
 );
