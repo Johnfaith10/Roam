@@ -1,4 +1,4 @@
-
+import 'react-native-url-polyfill/auto';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient } from '@supabase/supabase-js';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, Modal, KeyboardAvoidingView, Platform, Linking, Share, Image, ActivityIndicator } from 'react-native';
@@ -16,7 +16,7 @@ const SHOPS = {
     shops: [
       { name: "Linea Caffe", hood: "Mission District", rating: 4.9, tags: ["Best Latte", "Traditional", "Cappuccino"], hours: "Mon–Fri 7am–3pm, Wknd 8am–3pm", price: "$$", wifi: "Limited", seats: "Cozy", openNow: true, stamps: 847, isHiddenGem: false, photo: "https://lineacaffe.com/wp-content/uploads/2021/06/linea-outdoor-line.jpg", desc: "Widely considered SF's finest espresso bar — a tiny, precise Mission space where some of the most technically perfect shots in the country are pulled.", reviews: [{ a: "Local coffee writer", t: "The best straight espresso in San Francisco. No shortcuts, no gimmicks." }, { a: "Verified visitor", t: "Flew in from Chicago and made this my first stop. Worth every minute." }] },
       { name: "Sightglass Coffee", hood: "SoMa", rating: 4.8, tags: ["Ambiance", "Work Spot", "Best Latte"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, stamps: 912, isHiddenGem: false, photo: "https://img1.10bestmedia.com/Images/Photos/416582/Sightglass-Coffee_54_990x660.jpg", desc: "An iconic two-story SoMa roastery with soaring ceilings and massive skylights. The most beautiful café interior in San Francisco.", reviews: [{ a: "Eater SF", t: "The room is as good as the coffee. A genuine SF landmark." }, { a: "Visitor", t: "Nothing in the city comes close to the atmosphere here." }] },
-      { name: "Ballast Coffee", hood: "West Portal", rating: 4.7, tags: ["Experience", "Ambiance", "Work Spot"], hours: "Mon–Fri 7:30am–8pm, Wknd 7:30am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: false, stamps: 234, isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/I0-r3ff9BnkSrJEAYz857w/348s.jpg", desc: "SF's only source of Philippine Barako coffee — imported directly from Lipa, Batangas. The ube latte is stunning.", reviews: [{ a: "Nextdoor neighbor", t: "The Barako bean is a must try. You cannot find it elsewhere in SF." }, { a: "Regular", t: "The ube latte is beautiful. Big space, lovely patio, great wifi." }] },
+      { name: "Ballast Coffee", hood: "West Portal", rating: 4.7, tags: ["Experience", "Ambiance", "Work Spot"], hours: "Mon–Fri 7:30am–8pm, Wknd 7:30am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, stamps: 234, isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/I0-r3ff9BnkSrJEAYz857w/348s.jpg", desc: "SF's only source of Philippine Barako coffee — imported directly from Lipa, Batangas. The ube latte is stunning.", reviews: [{ a: "Nextdoor neighbor", t: "The Barako bean is a must try. You cannot find it elsewhere in SF." }, { a: "Regular", t: "The ube latte is beautiful. Big space, lovely patio, great wifi." }] },
       { name: "Paper Son Coffee", hood: "Dogpatch", rating: 4.8, tags: ["Experience", "Best Latte", "Matcha"], hours: "Tue–Sun 8am–4pm", price: "$$", wifi: "Yes", seats: "Moderate", openNow: true, stamps: 445, isHiddenGem: true, photo: "https://res.cloudinary.com/the-infatuation/image/upload/v1662504222/images/VerveCoffee_MarketStreet_PressPhoto_urocsl.jpg", desc: "A love letter to the Asian-American coffee experience. Pandan aerocanos, cardamom cappuccinos, exceptional matcha.", reviews: [{ a: "SF Magazine", t: "The most creative menu in SF specialty coffee." }, { a: "Regular", t: "The pandan aerocano changed my life." }] },
       { name: "Andytown Coffee", hood: "Outer Sunset", rating: 4.7, tags: ["Traditional", "Date Spot", "Ambiance"], hours: "Mon–Sun 7am–5pm", price: "$", wifi: "No", seats: "Cozy", openNow: true, stamps: 389, isHiddenGem: false, photo: "https://live.staticflickr.com/3871/15110445001_2986b3b0f5_b.jpg", desc: "A beloved institution at the foggy edge of the city, roasting on-site since 2014. Warm wood interior, community feel.", reviews: [{ a: "SF Gate", t: "The soul of the Outer Sunset in café form." }, { a: "Regular", t: "This is what a neighborhood coffee shop is supposed to feel like." }] },
       { name: "Saint Frank Coffee", hood: "Russian Hill", rating: 4.7, tags: ["Best Latte", "Date Spot", "Cappuccino"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Limited", seats: "Cozy", openNow: false, stamps: 312, isHiddenGem: false, photo: "https://openscopestudio.com/wp-content/uploads/2020/10/St-Frank-Coffee-0124-3069902204-O-e1603836207979.jpg", desc: "A refined Russian Hill gem with exceptional single-origin focus. SF's best kept secret for a coffee date.", reviews: [{ a: "Yelp Top Reviewer", t: "By far the best coffee in San Francisco." }, { a: "Regular", t: "My go-to date spot. Quiet, warm, genuinely special." }] },
@@ -262,10 +262,68 @@ function DirectionsModal({ visible, shopName, onConfirm, onClose }) {
   );
 }
  
-function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user }) {
+function ProfileMenuModal({ visible, onClose, user, onSignOut }) {
+  const [showChangePassword, setShowChangePassword] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [pwLoading, setPwLoading] = useState(false);
+  const [pwMessage, setPwMessage] = useState('');
+ 
+  const handleChangePassword = async () => {
+    if (!newPassword || newPassword.length < 6) { setPwMessage('Password must be at least 6 characters.'); return; }
+    setPwLoading(true);
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    setPwLoading(false);
+    if (error) { setPwMessage(error.message); } else { setPwMessage('Password updated!'); setNewPassword(''); setTimeout(() => { setPwMessage(''); setShowChangePassword(false); }, 2000); }
+  };
+ 
+  return (
+    <Modal visible={visible} transparent animationType="slide">
+      <TouchableOpacity style={styles.modalOverlay} activeOpacity={1} onPress={onClose}>
+        <TouchableOpacity activeOpacity={1} onPress={() => {}}>
+          <View style={styles.modalCard}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginBottom: 20 }}>
+              <View style={[styles.profileAvatar, { width: 52, height: 52, borderRadius: 26 }]}>
+                <Text style={{ fontSize: 22, fontWeight: '700', color: '#1A0F07' }}>{user?.name?.charAt(0).toUpperCase() || '?'}</Text>
+              </View>
+              <View>
+                <Text style={{ fontSize: 16, fontWeight: '700', color: '#111' }}>{user?.name || 'Coffee Explorer'}</Text>
+                <Text style={{ fontSize: 12, color: '#AAA', marginTop: 2 }}>{user?.email || ''}</Text>
+              </View>
+            </View>
+            {!showChangePassword ? (<>
+              <TouchableOpacity style={styles.menuItem} onPress={() => setShowChangePassword(true)}>
+                <Text style={styles.menuItemText}>🔑  Change password</Text>
+              </TouchableOpacity>
+              <View style={{ height: 1, backgroundColor: '#F0F0F0', marginVertical: 8 }} />
+              <TouchableOpacity style={styles.menuItem} onPress={() => { onClose(); onSignOut(); }}>
+                <Text style={[styles.menuItemText, { color: '#DC2626' }]}>← Sign out</Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={onClose} style={{ marginTop: 14, alignItems: 'center' }}>
+                <Text style={{ fontSize: 13, color: '#BBB' }}>Cancel</Text>
+              </TouchableOpacity>
+            </>) : (<>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#111', marginBottom: 12 }}>Change password</Text>
+              {pwMessage ? <View style={[styles.errorBox, pwMessage === 'Password updated!' && { backgroundColor: '#F0FDF4', borderColor: '#BBF7D0' }]}><Text style={[styles.errorText, pwMessage === 'Password updated!' && { color: '#16A34A' }]}>{pwMessage}</Text></View> : null}
+              <TextInput style={styles.authInput} placeholder="New password" placeholderTextColor="#BBB" value={newPassword} onChangeText={setNewPassword} secureTextEntry />
+              <TouchableOpacity style={[styles.modalBtn, (!newPassword || pwLoading) && { opacity: 0.4 }]} onPress={handleChangePassword} disabled={!newPassword || pwLoading}>
+                {pwLoading ? <ActivityIndicator color="#F5E6C8" /> : <Text style={styles.modalBtnText}>Update password</Text>}
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => { setShowChangePassword(false); setPwMessage(''); }} style={{ marginTop: 14, alignItems: 'center' }}>
+                <Text style={{ fontSize: 13, color: '#BBB' }}>Back</Text>
+              </TouchableOpacity>
+            </>)}
+          </View>
+        </TouchableOpacity>
+      </TouchableOpacity>
+    </Modal>
+  );
+}
+ 
+function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user, onSignOut }) {
   const [search, setSearch] = useState('');
   const [showRequest, setShowRequest] = useState(false);
   const [openNowOnly, setOpenNowOnly] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
   const cityKeys = Object.keys(SHOPS);
   const filteredCities = search.trim() ? cityKeys.filter(c => c.toLowerCase().includes(search.toLowerCase())) : cityKeys;
   const noMatch = search.trim() && filteredCities.length === 0;
@@ -284,9 +342,9 @@ function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user }) {
               <Text style={styles.logo}>Roam</Text>
               <Text style={styles.logoTag}>Specialty coffee, curated</Text>
             </View>
-            <View style={styles.profileDot}>
+            <TouchableOpacity style={styles.profileDot} onPress={() => setShowProfileMenu(true)}>
               <Text style={{ fontSize: 13, color: '#8B4A00', fontWeight: '600' }}>{user?.name?.charAt(0).toUpperCase() || '◯'}</Text>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.searchBox}>
             <Text style={{ fontSize: 14, opacity: 0.3 }}>🔍</Text>
@@ -431,6 +489,7 @@ function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user }) {
         <View style={{ height: 30 }} />
       </ScrollView>
       <RequestCityModal visible={showRequest} onClose={() => setShowRequest(false)} />
+      <ProfileMenuModal visible={showProfileMenu} onClose={() => setShowProfileMenu(false)} user={user} onSignOut={onSignOut} />
     </View>
   );
 }
@@ -985,7 +1044,7 @@ export default function App() {
     if (tab === 'passport') return <PassportScreen stamps={stamps} />;
     if (tab === 'saved') return <SavedScreen saved={saved} onShopPress={handleShopPress} />;
     if (tab === 'profile') return <ProfileScreen user={user} stamps={stamps} onSignOut={handleSignOut} />;
-    return <HomeScreen onCityPress={(c) => { setCity(c); setScreen('city'); }} onShopPress={handleShopPress} onCategoryPress={handleCategoryPress} stamps={stamps} user={user} saved={saved} onToggleSave={handleToggleSave} />;
+    return <HomeScreen onCityPress={(c) => { setCity(c); setScreen('city'); }} onShopPress={handleShopPress} onCategoryPress={handleCategoryPress} stamps={stamps} user={user} saved={saved} onToggleSave={handleToggleSave} onSignOut={handleSignOut} />;
   };
  
   return (
@@ -1182,6 +1241,10 @@ const styles = StyleSheet.create({
   modalInput: { backgroundColor: '#F8F8F8', borderRadius: 14, paddingHorizontal: 18, height: 52, fontSize: 16, color: '#111', marginBottom: 16, borderWidth: 1, borderColor: '#F0F0F0' },
   modalBtn: { backgroundColor: '#1A0F07', borderRadius: 14, height: 52, justifyContent: 'center', alignItems: 'center' },
   modalBtnText: { color: '#F5E6C8', fontSize: 15, fontWeight: '600' },
+ 
+  menuItem: { paddingVertical: 14, paddingHorizontal: 4 },
+  menuItemText: { fontSize: 15, fontWeight: '500', color: '#111' },
   directionsBtn: { backgroundColor: '#F8F8F8', borderRadius: 14, height: 48, justifyContent: 'center', alignItems: 'center', marginTop: 8, borderWidth: 1, borderColor: '#E8E8E8', marginBottom: 16 },
   directionsBtnText: { fontSize: 14, fontWeight: '600', color: '#1A0F07' },
 });
+ 
