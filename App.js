@@ -15,40 +15,40 @@ const SHOPS = {
   "San Francisco": {
     flag: "🇺🇸", country: "USA",
     shops: [
-      { name: "Linea Caffe", hood: "Mission District", rating: 4.9, tags: ["Best Latte", "Traditional", "Cappuccino"], hours: "Mon–Fri 7am–3pm, Wknd 8am–3pm", price: "$$", wifi: "Limited", seats: "Cozy", openNow: true, isHiddenGem: false, photo: "https://lineacaffe.com/wp-content/uploads/2021/06/linea-outdoor-line.jpg", desc: "Widely considered SF's finest espresso bar — a tiny, precise Mission space where some of the most technically perfect shots in the country are pulled.", reviews: [{ a: "Local coffee writer", t: "The best straight espresso in San Francisco. No shortcuts, no gimmicks." }, { a: "Verified visitor", t: "Flew in from Chicago and made this my first stop. Worth every minute." }] },
-      { name: "Sightglass Coffee", hood: "SoMa", rating: 4.8, tags: ["Ambiance", "Work Spot", "Best Latte"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: false, photo: "https://img1.10bestmedia.com/Images/Photos/416582/Sightglass-Coffee_54_990x660.jpg", desc: "An iconic two-story SoMa roastery with soaring ceilings and massive skylights. The most beautiful café interior in San Francisco.", reviews: [{ a: "Eater SF", t: "The room is as good as the coffee. A genuine SF landmark." }, { a: "Visitor", t: "Nothing in the city comes close to the atmosphere here." }] },
-      { name: "Ballast Coffee", hood: "West Portal", rating: 4.7, tags: ["Experience", "Ambiance", "Work Spot"], hours: "Mon–Fri 7:30am–8pm, Wknd 7:30am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/I0-r3ff9BnkSrJEAYz857w/348s.jpg", desc: "SF's only source of Philippine Barako coffee — imported directly from Lipa, Batangas. The ube latte is stunning.", reviews: [{ a: "Nextdoor neighbor", t: "The Barako bean is a must try. You cannot find it elsewhere in SF." }, { a: "Regular", t: "The ube latte is beautiful. Big space, lovely patio, great wifi." }] },
-      { name: "Paper Son Coffee", hood: "Dogpatch", rating: 4.8, tags: ["Experience", "Best Latte", "Matcha"], hours: "Tue–Sun 8am–4pm", price: "$$", wifi: "Yes", seats: "Moderate", openNow: true, isHiddenGem: true, photo: "https://res.cloudinary.com/the-infatuation/image/upload/v1662504222/images/VerveCoffee_MarketStreet_PressPhoto_urocsl.jpg", desc: "A love letter to the Asian-American coffee experience. Pandan aerocanos, cardamom cappuccinos, exceptional matcha.", reviews: [{ a: "SF Magazine", t: "The most creative menu in SF specialty coffee." }, { a: "Regular", t: "The pandan aerocano changed my life." }] },
-      { name: "Andytown Coffee", hood: "Outer Sunset", rating: 4.7, tags: ["Traditional", "Date Spot", "Ambiance"], hours: "Mon–Sun 7am–5pm", price: "$", wifi: "No", seats: "Cozy", openNow: true, isHiddenGem: false, photo: "https://live.staticflickr.com/3871/15110445001_2986b3b0f5_b.jpg", desc: "A beloved institution at the foggy edge of the city, roasting on-site since 2014. Warm wood interior, community feel.", reviews: [{ a: "SF Gate", t: "The soul of the Outer Sunset in café form." }, { a: "Regular", t: "This is what a neighborhood coffee shop is supposed to feel like." }] },
-      { name: "Saint Frank Coffee", hood: "Russian Hill", rating: 4.7, tags: ["Best Latte", "Date Spot", "Cappuccino"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Limited", seats: "Cozy", openNow: false, isHiddenGem: false, photo: "https://openscopestudio.com/wp-content/uploads/2020/10/St-Frank-Coffee-0124-3069902204-O-e1603836207979.jpg", desc: "A refined Russian Hill gem with exceptional single-origin focus. SF's best kept secret for a coffee date.", reviews: [{ a: "Yelp Top Reviewer", t: "By far the best coffee in San Francisco." }, { a: "Regular", t: "My go-to date spot. Quiet, warm, genuinely special." }] },
-      { name: "Tadaima", hood: "Mission District", rating: 4.8, tags: ["Matcha", "Experience", "Date Spot"], hours: "Mon–Thu 11am–4:30pm, Fri–Sun 10am–5:30pm", price: "$", wifi: "Limited", seats: "Cozy", openNow: true, isNew: true, isHiddenGem: false, photo: "https://assets.sfstandard.com/image/994911177489/image_1pls21bugl29790qa3dnl5d44o", desc: "The Mission's most exciting matcha spot since 2024. Japanese comfort food meets exceptional ceremonial matcha — the matcha latte with salted cream cheese is the best in SF.", reviews: [{ a: "TikTok visitor", t: "The matcha latte with salted cream cheese is probably the best matcha latte I've had in the city." }, { a: "SF food writer", t: "Tadaima means 'I'm home' in Japanese. That warmth comes through in every bite and sip." }] },
-      { name: "Q Specialty Coffee", hood: "Laurel Heights", rating: 4.8, tags: ["Matcha", "Experience", "Best Latte"], hours: "Daily — check Instagram for hours", price: "$$", wifi: "Yes", seats: "Moderate", openNow: true, isNew: true, isHiddenGem: false, photo: "https://res.cloudinary.com/the-infatuation/image/upload/q_auto,f_auto/Untitled_design_17_d6hh9s", desc: "SF's most viral new café — and the hype is earned. Owner Cyrus Shen roasts green beans in-house in just 12 minutes. Six matcha drinks including the Triple Matcha Yuzu Cloud. Lines out the door daily.", reviews: [{ a: "Axios SF, 2026", t: "After one sip, it all made sense. The matcha is forever my favorite." }, { a: "Yelp reviewer", t: "Best matcha in San Fran. Newly opened. The presentation is amazing." }] },
+      { name: "Linea Caffe", hood: "Mission District", rating: 4.9, tags: ["Best Latte", "Traditional", "Cappuccino"], hours: "Mon–Fri 7am–3pm, Wknd 8am–3pm", price: "$$", wifi: "Limited", seats: "Cozy", isHiddenGem: false, photo: "https://lineacaffe.com/wp-content/uploads/2021/06/linea-outdoor-line.jpg", desc: "Widely considered SF's finest espresso bar — a tiny, precise Mission space where some of the most technically perfect shots in the country are pulled.", reviews: [{ a: "Local coffee writer", t: "The best straight espresso in San Francisco. No shortcuts, no gimmicks." }, { a: "Verified visitor", t: "Flew in from Chicago and made this my first stop. Worth every minute." }] },
+      { name: "Sightglass Coffee", hood: "SoMa", rating: 4.8, tags: ["Ambiance", "Work Spot", "Best Latte"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: false, photo: "https://img1.10bestmedia.com/Images/Photos/416582/Sightglass-Coffee_54_990x660.jpg", desc: "An iconic two-story SoMa roastery with soaring ceilings and massive skylights. The most beautiful café interior in San Francisco.", reviews: [{ a: "Eater SF", t: "The room is as good as the coffee. A genuine SF landmark." }, { a: "Visitor", t: "Nothing in the city comes close to the atmosphere here." }] },
+      { name: "Ballast Coffee", hood: "West Portal", rating: 4.7, tags: ["Experience", "Ambiance", "Work Spot"], hours: "Mon–Fri 7:30am–8pm, Wknd 7:30am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/I0-r3ff9BnkSrJEAYz857w/348s.jpg", desc: "SF's only source of Philippine Barako coffee — imported directly from Lipa, Batangas. The ube latte is stunning.", reviews: [{ a: "Nextdoor neighbor", t: "The Barako bean is a must try. You cannot find it elsewhere in SF." }, { a: "Regular", t: "The ube latte is beautiful. Big space, lovely patio, great wifi." }] },
+      { name: "Paper Son Coffee", hood: "Dogpatch", rating: 4.8, tags: ["Experience", "Best Latte", "Matcha"], hours: "Tue–Sun 8am–4pm", price: "$$", wifi: "Yes", seats: "Moderate", isHiddenGem: true, photo: "https://res.cloudinary.com/the-infatuation/image/upload/v1662504222/images/VerveCoffee_MarketStreet_PressPhoto_urocsl.jpg", desc: "A love letter to the Asian-American coffee experience. Pandan aerocanos, cardamom cappuccinos, exceptional matcha.", reviews: [{ a: "SF Magazine", t: "The most creative menu in SF specialty coffee." }, { a: "Regular", t: "The pandan aerocano changed my life." }] },
+      { name: "Andytown Coffee", hood: "Outer Sunset", rating: 4.7, tags: ["Traditional", "Date Spot", "Ambiance"], hours: "Mon–Sun 7am–5pm", price: "$", wifi: "No", seats: "Cozy", isHiddenGem: false, photo: "https://live.staticflickr.com/3871/15110445001_2986b3b0f5_b.jpg", desc: "A beloved institution at the foggy edge of the city, roasting on-site since 2014. Warm wood interior, community feel.", reviews: [{ a: "SF Gate", t: "The soul of the Outer Sunset in café form." }, { a: "Regular", t: "This is what a neighborhood coffee shop is supposed to feel like." }] },
+      { name: "Saint Frank Coffee", hood: "Russian Hill", rating: 4.7, tags: ["Best Latte", "Date Spot", "Cappuccino"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Limited", seats: "Cozy", isHiddenGem: false, photo: "https://openscopestudio.com/wp-content/uploads/2020/10/St-Frank-Coffee-0124-3069902204-O-e1603836207979.jpg", desc: "A refined Russian Hill gem with exceptional single-origin focus. SF's best kept secret for a coffee date.", reviews: [{ a: "Yelp Top Reviewer", t: "By far the best coffee in San Francisco." }, { a: "Regular", t: "My go-to date spot. Quiet, warm, genuinely special." }] },
+      { name: "Tadaima", hood: "Mission District", rating: 4.8, tags: ["Matcha", "Experience", "Date Spot"], hours: "Mon–Thu 11am–4:30pm, Fri–Sun 10am–5:30pm", price: "$", wifi: "Limited", seats: "Cozy", isNew: true, isHiddenGem: false, photo: "https://assets.sfstandard.com/image/994911177489/image_1pls21bugl29790qa3dnl5d44o", desc: "The Mission's most exciting matcha spot since 2024. Japanese comfort food meets exceptional ceremonial matcha — the matcha latte with salted cream cheese is the best in SF.", reviews: [{ a: "TikTok visitor", t: "The matcha latte with salted cream cheese is probably the best matcha latte I've had in the city." }, { a: "SF food writer", t: "Tadaima means 'I'm home' in Japanese. That warmth comes through in every bite and sip." }] },
+      { name: "Q Specialty Coffee", hood: "Laurel Heights", rating: 4.8, tags: ["Matcha", "Experience", "Best Latte"], hours: "Daily — check Instagram for hours", price: "$$", wifi: "Yes", seats: "Moderate", isNew: true, isHiddenGem: false, photo: "https://res.cloudinary.com/the-infatuation/image/upload/q_auto,f_auto/Untitled_design_17_d6hh9s", desc: "SF's most viral new café — and the hype is earned. Owner Cyrus Shen roasts green beans in-house in just 12 minutes. Six matcha drinks including the Triple Matcha Yuzu Cloud. Lines out the door daily.", reviews: [{ a: "Axios SF, 2026", t: "After one sip, it all made sense. The matcha is forever my favorite." }, { a: "Yelp reviewer", t: "Best matcha in San Fran. Newly opened. The presentation is amazing." }] },
     ]
   },
   "Los Angeles": {
     flag: "🇺🇸", country: "USA",
     shops: [
-      { name: "Harun Coffee", hood: "Leimert Park", rating: 4.8, tags: ["Experience", "Ambiance", "Cold Brew"], hours: "Mon–Sun 7am–4pm & 6pm–11pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isCultural: true, isHiddenGem: false, photo: "https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1400,ar_4:3,g_center,f_auto/cms/guides/5-exciting-things-to-do-eat-between-august-18th-22nd/Harun_Coffee", desc: "A cultural institution in Leimert Park. By day a specialty coffee shop; by night a speakeasy through a hidden wall. Founded by A$AP Rocky's former manager.", reviews: [{ a: "The Infatuation", t: "More than coffee — a community hub with a gallery and lifestyle brand." }, { a: "LA Sentinel, 2026", t: "Pull open the canary yellow wall and enter a high-ceilinged speakeasy." }] },
-      { name: "Go Get Em Tiger", hood: "Los Feliz", rating: 4.9, tags: ["Best Latte", "Work Spot", "Experience"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: false, photo: "https://gget.com/cdn/shop/files/GCM_cafe.jpg?v=1732579503&width=2400", desc: "Founded by two James Beard award winners, GGET redefined LA specialty coffee with a cocktail bar service model.", reviews: [{ a: "LA Times", t: "GGET changed how LA thinks about the entire coffee experience." }, { a: "Regular", t: "The macchiato flight alone is worth the trip." }] },
-      { name: "Verve Coffee Roasters", hood: "Downtown LA", rating: 4.8, tags: ["Work Spot", "Ambiance", "Best Latte"], hours: "Mon–Fri 7am–6pm, Wknd 8am–6pm", price: "$$", wifi: "Excellent", seats: "Plenty", openNow: true, isHiddenGem: false, photo: "https://www.vervecoffee.com/cdn/shop/files/Cafes-SpringSt-9018_800x.jpg?v=1654116154", desc: "The Santa Cruz roaster's DTLA flagship — soaring ceilings, living plant walls, light that makes you want to stay all day.", reviews: [{ a: "Coffee Traveler", t: "High ceilings, concrete, living plants. A perfect work environment." }, { a: "Regular", t: "The oat cortado is smooth perfection." }] },
-      { name: "Maru Coffee", hood: "Arts District", rating: 4.8, tags: ["Traditional", "Cappuccino", "Matcha"], hours: "Daily 7am–5pm", price: "$$", wifi: "Limited", seats: "Moderate", openNow: true, isHiddenGem: false, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/29/11/42/photo0jpg.jpg?w=500&h=-1&s=1", desc: "Named for the Korean word for mountaintop. Japanese-influenced precision. The cappuccino and matcha are world class.", reviews: [{ a: "Timeout LA", t: "Lines down the block on weekends. The best cappuccino in Los Angeles." }, { a: "Regular", t: "Every detail is considered — the cup, the pour, the space." }] },
-      { name: "Intelligentsia Coffee", hood: "Silver Lake", rating: 4.7, tags: ["Traditional", "Work Spot", "Cold Brew"], hours: "Mon–Fri 6am–7pm, Wknd 7am–7pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: false, isHiddenGem: false, photo: "https://images.squarespace-cdn.com/content/v1/5ecc30f127d0ac66b8a0075e/1609309585814-424720Z7Y3QYF0IV71GH/02_intelli.JPG", desc: "The institution that invented direct trade coffee sourcing. The standard-bearer for traditional specialty coffee in LA.", reviews: [{ a: "Bon Appétit", t: "Intelligentsia invented the vocabulary for the entire specialty coffee industry." }, { a: "Regular", t: "The best traditional espresso in Silver Lake." }] },
-      { name: "Canyon Coffee", hood: "Echo Park", rating: 4.8, tags: ["Date Spot", "Ambiance", "Best Latte"], hours: "Daily 7am–5pm", price: "$$", wifi: "Limited", seats: "Cozy", openNow: true, isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/cI3Lx-irhIhCOF-NBURECA/348s.jpg", desc: "After years supplying beans to LA's best cafés, Canyon Coffee opened in Echo Park as a love letter to slow mornings.", reviews: [{ a: "Eater LA", t: "Canyon Coffee is what every neighborhood deserves." }, { a: "Regular", t: "Best date spot for coffee in all of LA." }] },
-      { name: "Kindness & Mischief", hood: "Highland Park", rating: 4.7, tags: ["Experience", "Work Spot", "Matcha"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: true, photo: "https://sprudge.com/wp-content/uploads/2016/06/Sprudge-KindnessAndMischief-TatianaErnst-KandM-Interior.jpg", desc: "Community-centered specialty shop with a turquoise facade. The rotating guest roaster program makes every visit a discovery.", reviews: [{ a: "Discover LA", t: "The most community-driven specialty shop in LA." }, { a: "Regular", t: "The Mischief latte is the most creative drink in the city." }] },
+      { name: "Harun Coffee", hood: "Leimert Park", rating: 4.8, tags: ["Experience", "Ambiance", "Cold Brew"], hours: "Mon–Sun 7am–4pm & 6pm–11pm", price: "$$", wifi: "Yes", seats: "Plenty", isCultural: true, isHiddenGem: false, photo: "https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1400,ar_4:3,g_center,f_auto/cms/guides/5-exciting-things-to-do-eat-between-august-18th-22nd/Harun_Coffee", desc: "A cultural institution in Leimert Park. By day a specialty coffee shop; by night a speakeasy through a hidden wall. Founded by A$AP Rocky's former manager.", reviews: [{ a: "The Infatuation", t: "More than coffee — a community hub with a gallery and lifestyle brand." }, { a: "LA Sentinel, 2026", t: "Pull open the canary yellow wall and enter a high-ceilinged speakeasy." }] },
+      { name: "Go Get Em Tiger", hood: "Los Feliz", rating: 4.9, tags: ["Best Latte", "Work Spot", "Experience"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: false, photo: "https://gget.com/cdn/shop/files/GCM_cafe.jpg?v=1732579503&width=2400", desc: "Founded by two James Beard award winners, GGET redefined LA specialty coffee with a cocktail bar service model.", reviews: [{ a: "LA Times", t: "GGET changed how LA thinks about the entire coffee experience." }, { a: "Regular", t: "The macchiato flight alone is worth the trip." }] },
+      { name: "Verve Coffee Roasters", hood: "Downtown LA", rating: 4.8, tags: ["Work Spot", "Ambiance", "Best Latte"], hours: "Mon–Fri 7am–6pm, Wknd 8am–6pm", price: "$$", wifi: "Excellent", seats: "Plenty", isHiddenGem: false, photo: "https://www.vervecoffee.com/cdn/shop/files/Cafes-SpringSt-9018_800x.jpg?v=1654116154", desc: "The Santa Cruz roaster's DTLA flagship — soaring ceilings, living plant walls, light that makes you want to stay all day.", reviews: [{ a: "Coffee Traveler", t: "High ceilings, concrete, living plants. A perfect work environment." }, { a: "Regular", t: "The oat cortado is smooth perfection." }] },
+      { name: "Maru Coffee", hood: "Arts District", rating: 4.8, tags: ["Traditional", "Cappuccino", "Matcha"], hours: "Daily 7am–5pm", price: "$$", wifi: "Limited", seats: "Moderate", isHiddenGem: false, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/29/11/42/photo0jpg.jpg?w=500&h=-1&s=1", desc: "Named for the Korean word for mountaintop. Japanese-influenced precision. The cappuccino and matcha are world class.", reviews: [{ a: "Timeout LA", t: "Lines down the block on weekends. The best cappuccino in Los Angeles." }, { a: "Regular", t: "Every detail is considered — the cup, the pour, the space." }] },
+      { name: "Intelligentsia Coffee", hood: "Silver Lake", rating: 4.7, tags: ["Traditional", "Work Spot", "Cold Brew"], hours: "Mon–Fri 6am–7pm, Wknd 7am–7pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: false, photo: "https://images.squarespace-cdn.com/content/v1/5ecc30f127d0ac66b8a0075e/1609309585814-424720Z7Y3QYF0IV71GH/02_intelli.JPG", desc: "The institution that invented direct trade coffee sourcing. The standard-bearer for traditional specialty coffee in LA.", reviews: [{ a: "Bon Appétit", t: "Intelligentsia invented the vocabulary for the entire specialty coffee industry." }, { a: "Regular", t: "The best traditional espresso in Silver Lake." }] },
+      { name: "Canyon Coffee", hood: "Echo Park", rating: 4.8, tags: ["Date Spot", "Ambiance", "Best Latte"], hours: "Daily 7am–5pm", price: "$$", wifi: "Limited", seats: "Cozy", isHiddenGem: true, photo: "https://s3-media0.fl.yelpcdn.com/bphoto/cI3Lx-irhIhCOF-NBURECA/348s.jpg", desc: "After years supplying beans to LA's best cafés, Canyon Coffee opened in Echo Park as a love letter to slow mornings.", reviews: [{ a: "Eater LA", t: "Canyon Coffee is what every neighborhood deserves." }, { a: "Regular", t: "Best date spot for coffee in all of LA." }] },
+      { name: "Kindness & Mischief", hood: "Highland Park", rating: 4.7, tags: ["Experience", "Work Spot", "Matcha"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: true, photo: "https://sprudge.com/wp-content/uploads/2016/06/Sprudge-KindnessAndMischief-TatianaErnst-KandM-Interior.jpg", desc: "Community-centered specialty shop with a turquoise facade. The rotating guest roaster program makes every visit a discovery.", reviews: [{ a: "Discover LA", t: "The most community-driven specialty shop in LA." }, { a: "Regular", t: "The Mischief latte is the most creative drink in the city." }] },
     ]
   },
   "New York": {
     flag: "🇺🇸", country: "USA",
     shops: [
-      { name: "Arcane Estate Coffee", hood: "West Village", rating: 4.9, tags: ["Experience", "Traditional", "Date Spot"], hours: "Mon–Fri 8am–5pm, Wknd 9am–5pm", price: "$$$", wifi: "Limited", seats: "Cozy", openNow: true, isHiddenGem: false, photo: "https://media.timeout.com/images/106375451/750/422/image.jpg", desc: "Ranked #12 on the World's 100 Best Coffee Shops list in 2026. A moody West Village hideaway devoted to Panamanian single-origin coffee.", reviews: [{ a: "Timeout New York, 2026", t: "Arcane's devotion to Panama's terroir stands out as something genuinely world-class." }, { a: "Regular", t: "The most intentional cup of coffee I have ever had." }] },
-      { name: "Sey Coffee", hood: "Bushwick, Brooklyn", rating: 4.9, tags: ["Best Latte", "Traditional", "Work Spot"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: false, photo: "https://sprudge.com/wp-content/uploads/2017/08/Sey_Coffee_Bushwick_Liz_Clayton-3-1104x780.jpg", desc: "Consistently ranked the finest specialty roaster in NYC. Light roasts so delicate you taste florals you didn't know existed in coffee.", reviews: [{ a: "My Coffee Explorer 2026", t: "Light roast masters. The Saturday line is worth every minute." }, { a: "Regular", t: "The best coffee in New York City, full stop." }] },
-      { name: "Devoción", hood: "Williamsburg, Brooklyn", rating: 4.8, tags: ["Ambiance", "Best Latte", "Work Spot"], hours: "Daily 8am–6pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isHiddenGem: false, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/4e/9d/c5/the-spacious-interior.jpg?w=900&h=500&s=1", desc: "A Colombian roaster with a breathtaking Williamsburg space and a living plant wall. Beans arrive within 10 days of harvest.", reviews: [{ a: "Drips of God", t: "The latte is exceptional and the farm-to-cup story is unmatched." }, { a: "Regular", t: "You can taste how fresh the beans are." }] },
-      { name: "Maru Coffee", hood: "Williamsburg, Brooklyn", rating: 4.8, tags: ["Traditional", "Cappuccino", "Matcha"], hours: "Daily 7:30am–5pm", price: "$$", wifi: "Limited", seats: "Moderate", openNow: true, isNew: true, isHiddenGem: false, photo: "https://www.marucoffee.com/cdn/shop/files/Maru_Coffee_Williamsburg_Brooklyn_4_1000x.jpg?v=1759875658", desc: "The cult LA favorite brought its Japanese-influenced precision to Williamsburg in late 2025. Beans never older than 3 days.", reviews: [{ a: "NYC-MAP.COM, 2026", t: "Coffee here isn't for work — it's for slowing down and savoring the moment." }, { a: "Regular", t: "Having Maru in Williamsburg feels like a gift to New York." }] },
-      { name: "% Arabica — Dumbo", hood: "Dumbo, Brooklyn", rating: 4.8, tags: ["Experience", "Ambiance", "Matcha"], hours: "Daily 7:30am–6pm", price: "$$", wifi: "Limited", seats: "Moderate", openNow: false, isNew: true, isHiddenGem: false, photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfWpxCHeqn_UH_IkjkG3MC6dFbCxAQvuqkw&s", desc: "The Kyoto roaster's Brooklyn flagship steps from the Brooklyn Bridge. The Spanish latte, matcha, and pour overs are all exceptional.", reviews: [{ a: "The Infatuation", t: "The baristas make a perfect cup every time." }, { a: "Regular", t: "Beautiful spot with the Brooklyn Bridge view." }] },
-      { name: "Fast Times at Buck Mason", hood: "SoHo, Manhattan", rating: 4.7, tags: ["Experience", "Ambiance", "Date Spot"], hours: "Mon–Sat 8am–8pm, Sun 8am–7pm", price: "$$", wifi: "Yes", seats: "Plenty", openNow: true, isNew: true, isHiddenGem: false, photo: "https://www.fasttimescoffee.com/cdn/shop/files/FastTimesSoHo.jpg?v=1753485485&width=900", desc: "A specialty coffee bar inside Buck Mason's SoHo flagship — 1,000 curated vintage books, candles, incense, vinyl.", reviews: [{ a: "TikTok visitor", t: "Ambiance 10/10. Candles, incense, great vinyl. Perfect solo creative session." }, { a: "Regular", t: "The coziest secret in SoHo. The brown sugar latte is exceptional." }] },
-      { name: "787 Coffee", hood: "SoHo, Manhattan", rating: 4.7, tags: ["Traditional", "Experience", "Best Latte"], hours: "Daily 7am–8pm", price: "$$", wifi: "Yes", seats: "Moderate", openNow: true, isHiddenGem: true, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/80/9e/10/caption.jpg?w=900&h=500&s=1", desc: "The only NYC coffee shop that owns its own farm — Hacienda Iluminada in Puerto Rico. The Coquito Latte has a cult following.", reviews: [{ a: "787 Coffee", t: "We source from farms we trust — including our own farm in Puerto Rico." }, { a: "Regular", t: "The Coquito Latte is one of the best things I have ever had." }] },
-      { name: "Café Integral", hood: "Nolita, Manhattan", rating: 4.9, tags: ["Cappuccino", "Traditional", "Best Latte"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$$", wifi: "Limited", seats: "Cozy", openNow: true, isHiddenGem: false, photo: "https://images.squarespace-cdn.com/content/v1/50ce0513e4b0c301a8234314/1473865808815-30VGNVGYLKI4A9DLXGJW/Screen+Shot+2016-09-14+at+10.08.22+AM.jpg?format=750w", desc: "A Nicaraguan-focused specialty roaster in a beautifully spare Nolita space where every cappuccino is a technical masterpiece.", reviews: [{ a: "New York magazine", t: "Integral proves that NYC can do specialty coffee as well as anywhere in the world." }, { a: "Regular", t: "The most precise, intentional cappuccino I have ever had." }] },
-      { name: "Rhythm Zero", hood: "West Village, Manhattan", rating: 4.7, tags: ["Experience", "Ambiance", "Date Spot"], hours: "Mon–Fri 7am–4pm, Wknd 8am–4pm", price: "$$", wifi: "Check in store", seats: "Limited", openNow: true, isHiddenGem: true, photo: "https://whereyoueat.com/r_gallery_images/rgallery-26776/Pic1.jpg", desc: "A creative multidisciplinary hub born in Greenpoint in 2022 — part specialty coffee bar, part gallery, part curated retail. One of NYC's most intentional third-wave coffee experiences, built in collaboration with artists, designers and brands.", reviews: [{ a: "Rhythm Zero", t: "From sourcing the finest coffee beans to curating exhibitions that spoke to the soul — every step required a leap of faith." }, { a: "Regular", t: "Came for the coffee, stayed for the whole vibe. Nothing else like it in the city." }] },
+      { name: "Arcane Estate Coffee", hood: "West Village", rating: 4.9, tags: ["Experience", "Traditional", "Date Spot"], hours: "Mon–Fri 8am–5pm, Wknd 9am–5pm", price: "$$$", wifi: "Limited", seats: "Cozy", isHiddenGem: false, photo: "https://media.timeout.com/images/106375451/750/422/image.jpg", desc: "Ranked #12 on the World's 100 Best Coffee Shops list in 2026. A moody West Village hideaway devoted to Panamanian single-origin coffee.", reviews: [{ a: "Timeout New York, 2026", t: "Arcane's devotion to Panama's terroir stands out as something genuinely world-class." }, { a: "Regular", t: "The most intentional cup of coffee I have ever had." }] },
+      { name: "Sey Coffee", hood: "Bushwick, Brooklyn", rating: 4.9, tags: ["Best Latte", "Traditional", "Work Spot"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: false, photo: "https://sprudge.com/wp-content/uploads/2017/08/Sey_Coffee_Bushwick_Liz_Clayton-3-1104x780.jpg", desc: "Consistently ranked the finest specialty roaster in NYC. Light roasts so delicate you taste florals you didn't know existed in coffee.", reviews: [{ a: "My Coffee Explorer 2026", t: "Light roast masters. The Saturday line is worth every minute." }, { a: "Regular", t: "The best coffee in New York City, full stop." }] },
+      { name: "Devoción", hood: "Williamsburg, Brooklyn", rating: 4.8, tags: ["Ambiance", "Best Latte", "Work Spot"], hours: "Daily 8am–6pm", price: "$$", wifi: "Yes", seats: "Plenty", isHiddenGem: false, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/4e/9d/c5/the-spacious-interior.jpg?w=900&h=500&s=1", desc: "A Colombian roaster with a breathtaking Williamsburg space and a living plant wall. Beans arrive within 10 days of harvest.", reviews: [{ a: "Drips of God", t: "The latte is exceptional and the farm-to-cup story is unmatched." }, { a: "Regular", t: "You can taste how fresh the beans are." }] },
+      { name: "Maru Coffee", hood: "Williamsburg, Brooklyn", rating: 4.8, tags: ["Traditional", "Cappuccino", "Matcha"], hours: "Daily 7:30am–5pm", price: "$$", wifi: "Limited", seats: "Moderate", isNew: true, isHiddenGem: false, photo: "https://www.marucoffee.com/cdn/shop/files/Maru_Coffee_Williamsburg_Brooklyn_4_1000x.jpg?v=1759875658", desc: "The cult LA favorite brought its Japanese-influenced precision to Williamsburg in late 2025. Beans never older than 3 days.", reviews: [{ a: "NYC-MAP.COM, 2026", t: "Coffee here isn't for work — it's for slowing down and savoring the moment." }, { a: "Regular", t: "Having Maru in Williamsburg feels like a gift to New York." }] },
+      { name: "% Arabica — Dumbo", hood: "Dumbo, Brooklyn", rating: 4.8, tags: ["Experience", "Ambiance", "Matcha"], hours: "Daily 7:30am–6pm", price: "$$", wifi: "Limited", seats: "Moderate", isNew: true, isHiddenGem: false, photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfWpxCHeqn_UH_IkjkG3MC6dFbCxAQvuqkw&s", desc: "The Kyoto roaster's Brooklyn flagship steps from the Brooklyn Bridge. The Spanish latte, matcha, and pour overs are all exceptional.", reviews: [{ a: "The Infatuation", t: "The baristas make a perfect cup every time." }, { a: "Regular", t: "Beautiful spot with the Brooklyn Bridge view." }] },
+      { name: "Fast Times at Buck Mason", hood: "SoHo, Manhattan", rating: 4.7, tags: ["Experience", "Ambiance", "Date Spot"], hours: "Mon–Sat 8am–8pm, Sun 8am–7pm", price: "$$", wifi: "Yes", seats: "Plenty", isNew: true, isHiddenGem: false, photo: "https://www.fasttimescoffee.com/cdn/shop/files/FastTimesSoHo.jpg?v=1753485485&width=900", desc: "A specialty coffee bar inside Buck Mason's SoHo flagship — 1,000 curated vintage books, candles, incense, vinyl.", reviews: [{ a: "TikTok visitor", t: "Ambiance 10/10. Candles, incense, great vinyl. Perfect solo creative session." }, { a: "Regular", t: "The coziest secret in SoHo. The brown sugar latte is exceptional." }] },
+      { name: "787 Coffee", hood: "SoHo, Manhattan", rating: 4.7, tags: ["Traditional", "Experience", "Best Latte"], hours: "Daily 7am–8pm", price: "$$", wifi: "Yes", seats: "Moderate", isHiddenGem: true, photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/80/9e/10/caption.jpg?w=900&h=500&s=1", desc: "The only NYC coffee shop that owns its own farm — Hacienda Iluminada in Puerto Rico. The Coquito Latte has a cult following.", reviews: [{ a: "787 Coffee", t: "We source from farms we trust — including our own farm in Puerto Rico." }, { a: "Regular", t: "The Coquito Latte is one of the best things I have ever had." }] },
+      { name: "Café Integral", hood: "Nolita, Manhattan", rating: 4.9, tags: ["Cappuccino", "Traditional", "Best Latte"], hours: "Mon–Fri 7am–5pm, Wknd 8am–5pm", price: "$$$", wifi: "Limited", seats: "Cozy", isHiddenGem: false, photo: "https://images.squarespace-cdn.com/content/v1/50ce0513e4b0c301a8234314/1473865808815-30VGNVGYLKI4A9DLXGJW/Screen+Shot+2016-09-14+at+10.08.22+AM.jpg?format=750w", desc: "A Nicaraguan-focused specialty roaster in a beautifully spare Nolita space where every cappuccino is a technical masterpiece.", reviews: [{ a: "New York magazine", t: "Integral proves that NYC can do specialty coffee as well as anywhere in the world." }, { a: "Regular", t: "The most precise, intentional cappuccino I have ever had." }] },
+      { name: "Rhythm Zero", hood: "West Village, Manhattan", rating: 4.7, tags: ["Experience", "Ambiance", "Date Spot"], hours: "Mon–Fri 7am–4pm, Wknd 8am–4pm", price: "$$", wifi: "Check in store", seats: "Limited", isHiddenGem: true, photo: "https://whereyoueat.com/r_gallery_images/rgallery-26776/Pic1.jpg", desc: "A creative multidisciplinary hub born in Greenpoint in 2022 — part specialty coffee bar, part gallery, part curated retail. One of NYC's most intentional third-wave coffee experiences, built in collaboration with artists, designers and brands.", reviews: [{ a: "Rhythm Zero", t: "From sourcing the finest coffee beans to curating exhibitions that spoke to the soul — every step required a leap of faith." }, { a: "Regular", t: "Came for the coffee, stayed for the whole vibe. Nothing else like it in the city." }] },
     ]
   }
 };
@@ -160,12 +160,57 @@ function OnboardingScreen({ onLogin, onSignup }) {
   );
 }
  
+function ForgotPasswordScreen({ onBack }) {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+ 
+  const handleReset = async () => {
+    setLoading(true); setError('');
+    const { error } = await supabase.auth.resetPasswordForEmail(email);
+    setLoading(false);
+    if (error) { setError(error.message); } else { setSent(true); }
+  };
+ 
+  return (
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1, backgroundColor: '#fff' }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
+        <View style={styles.authHeader}>
+          <TouchableOpacity onPress={onBack} style={styles.backBtn}><Text style={styles.backBtnText}>← Back</Text></TouchableOpacity>
+          <Text style={styles.authTitle}>Reset password</Text>
+          <Text style={styles.authSub}>We'll send a reset link to your email.</Text>
+        </View>
+        <View style={{ padding: 22 }}>
+          {sent ? (
+            <View style={{ alignItems: 'center', paddingVertical: 32 }}>
+              <Text style={{ fontSize: 48, marginBottom: 16 }}>📬</Text>
+              <Text style={{ fontSize: 18, fontWeight: '700', color: '#111', marginBottom: 8 }}>Check your email</Text>
+              <Text style={{ fontSize: 14, color: '#888', textAlign: 'center', lineHeight: 22 }}>If an account exists for {email}, a reset link has been sent.</Text>
+              <TouchableOpacity style={[styles.authBtn, { marginTop: 24, width: '100%' }]} onPress={onBack}>
+                <Text style={styles.authBtnText}>Back to sign in</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (<>
+            {error ? <View style={styles.errorBox}><Text style={styles.errorText}>{error}</Text></View> : null}
+            <TextInput style={styles.authInput} placeholder="Email address" placeholderTextColor="#BBB" value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" textContentType="emailAddress" autoComplete="email" />
+            <TouchableOpacity style={[styles.authBtn, (!email || loading) && { opacity: 0.4 }]} onPress={handleReset} disabled={!email || loading}>
+              {loading ? <ActivityIndicator color="#F5E6C8" /> : <Text style={styles.authBtnText}>Send reset link</Text>}
+            </TouchableOpacity>
+          </>)}
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
+}
+ 
 function AuthScreen({ mode, onSuccess, onBack }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
   const isSignup = mode === 'signup';
  
   const handleAuth = async () => {
@@ -191,6 +236,8 @@ function AuthScreen({ mode, onSuccess, onBack }) {
     setLoading(false);
   };
  
+  if (showForgotPassword) return <ForgotPasswordScreen onBack={() => setShowForgotPassword(false)} />;
+ 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1, backgroundColor: '#fff' }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
@@ -203,12 +250,12 @@ function AuthScreen({ mode, onSuccess, onBack }) {
           {error ? <View style={styles.errorBox}><Text style={styles.errorText}>{error}</Text></View> : null}
           <View style={styles.dividerRow}><View style={styles.dividerLine} /><Text style={styles.dividerText}>email & password</Text><View style={styles.dividerLine} /></View>
           {isSignup && <TextInput style={styles.authInput} placeholder="Your name" placeholderTextColor="#BBB" value={name} onChangeText={setName} autoCapitalize="words" />}
-          <TextInput style={styles.authInput} placeholder="Email address" placeholderTextColor="#BBB" value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" />
-          <TextInput style={styles.authInput} placeholder="Password" placeholderTextColor="#BBB" value={password} onChangeText={setPassword} secureTextEntry />
+          <TextInput style={styles.authInput} placeholder="Email address" placeholderTextColor="#BBB" value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" textContentType="emailAddress" autoComplete="email" />
+          <TextInput style={styles.authInput} placeholder="Password" placeholderTextColor="#BBB" value={password} onChangeText={setPassword} secureTextEntry textContentType={isSignup ? "newPassword" : "password"} autoComplete={isSignup ? "new-password" : "current-password"} />
           <TouchableOpacity style={[styles.authBtn, (!email || !password || loading) && { opacity: 0.4 }]} onPress={handleAuth} disabled={!email || !password || loading}>
             {loading ? <ActivityIndicator color="#F5E6C8" /> : <Text style={styles.authBtnText}>{isSignup ? 'Create account' : 'Sign in'}</Text>}
           </TouchableOpacity>
-          {!isSignup && <TouchableOpacity style={{ alignItems: 'center', marginTop: 16 }}><Text style={{ fontSize: 13, color: '#C4B49A' }}>Forgot password?</Text></TouchableOpacity>}
+          {!isSignup && <TouchableOpacity style={{ alignItems: 'center', marginTop: 16 }} onPress={() => setShowForgotPassword(true)}><Text style={{ fontSize: 13, color: '#C4B49A' }}>Forgot password?</Text></TouchableOpacity>}
           <Text style={styles.authTerms}>By continuing you agree to Roam's Terms of Service and Privacy Policy.</Text>
         </View>
       </ScrollView>
@@ -269,12 +316,14 @@ function ProfileMenuModal({ visible, onClose, user, onSignOut }) {
   const [pwLoading, setPwLoading] = useState(false);
   const [pwMessage, setPwMessage] = useState('');
  
+  const [confirmPassword, setConfirmPassword] = useState('');
   const handleChangePassword = async () => {
     if (!newPassword || newPassword.length < 6) { setPwMessage('Password must be at least 6 characters.'); return; }
+    if (newPassword !== confirmPassword) { setPwMessage('Passwords do not match.'); return; }
     setPwLoading(true);
     const { error } = await supabase.auth.updateUser({ password: newPassword });
     setPwLoading(false);
-    if (error) { setPwMessage(error.message); } else { setPwMessage('Password updated!'); setNewPassword(''); setTimeout(() => { setPwMessage(''); setShowChangePassword(false); }, 2000); }
+    if (error) { setPwMessage(error.message); } else { setPwMessage('Password updated!'); setNewPassword(''); setConfirmPassword(''); setTimeout(() => { setPwMessage(''); setShowChangePassword(false); }, 2000); }
   };
  
   return (
@@ -305,7 +354,8 @@ function ProfileMenuModal({ visible, onClose, user, onSignOut }) {
             </>) : (<>
               <Text style={{ fontSize: 14, fontWeight: '600', color: '#111', marginBottom: 12 }}>Change password</Text>
               {pwMessage ? <View style={[styles.errorBox, pwMessage === 'Password updated!' && { backgroundColor: '#F0FDF4', borderColor: '#BBF7D0' }]}><Text style={[styles.errorText, pwMessage === 'Password updated!' && { color: '#16A34A' }]}>{pwMessage}</Text></View> : null}
-              <TextInput style={styles.authInput} placeholder="New password" placeholderTextColor="#BBB" value={newPassword} onChangeText={setNewPassword} secureTextEntry />
+              <TextInput style={styles.authInput} placeholder="New password" placeholderTextColor="#BBB" value={newPassword} onChangeText={setNewPassword} secureTextEntry textContentType="newPassword" />
+              <TextInput style={styles.authInput} placeholder="Confirm new password" placeholderTextColor="#BBB" value={confirmPassword} onChangeText={setConfirmPassword} secureTextEntry textContentType="newPassword" />
               <TouchableOpacity style={[styles.modalBtn, (!newPassword || pwLoading) && { opacity: 0.4 }]} onPress={handleChangePassword} disabled={!newPassword || pwLoading}>
                 {pwLoading ? <ActivityIndicator color="#F5E6C8" /> : <Text style={styles.modalBtnText}>Update password</Text>}
               </TouchableOpacity>
@@ -323,14 +373,12 @@ function ProfileMenuModal({ visible, onClose, user, onSignOut }) {
 function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user, onSignOut }) {
   const [search, setSearch] = useState('');
   const [showRequest, setShowRequest] = useState(false);
-  const [openNowOnly, setOpenNowOnly] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const cityKeys = Object.keys(SHOPS);
   const filteredCities = search.trim() ? cityKeys.filter(c => c.toLowerCase().includes(search.toLowerCase())) : cityKeys;
   const noMatch = search.trim() && filteredCities.length === 0;
   const allShops = Object.entries(SHOPS).flatMap(([city, data]) => data.shops.map(s => ({ ...s, city })));
-  const nearMeShops = allShops.filter(s => openNowOnly ? s.openNow : true).slice(0, 6);
-  const trendingShops = [...allShops].sort((a, b) => b.stamps - a.stamps).slice(0, 6);
+  const nearMeShops = allShops.slice(0, 6);
   const hiddenGems = allShops.filter(s => s.isHiddenGem);
   const sotw = SHOPS[SHOP_OF_WEEK.city]?.shops.find(s => s.name === SHOP_OF_WEEK.name);
  
@@ -398,19 +446,12 @@ function HomeScreen({ onCityPress, onShopPress, onCategoryPress, user, onSignOut
  
             <View style={[styles.sectionHeader, { marginTop: 8 }]}>
               <Text style={styles.sectionTitle}>Near you</Text>
-              <TouchableOpacity onPress={() => setOpenNowOnly(!openNowOnly)} style={[styles.openNowBtn, openNowOnly && styles.openNowBtnActive]}>
-                <Text style={[styles.openNowBtnText, openNowOnly && styles.openNowBtnTextActive]}>{openNowOnly ? '✓ Open now' : 'Open now'}</Text>
-              </TouchableOpacity>
             </View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 22, gap: 12 }}>
               {nearMeShops.map(shop => (
                 <TouchableOpacity key={shop.city + shop.name + 'near'} style={styles.nearCard} onPress={() => onShopPress(shop.city, shop.name)} activeOpacity={0.9}>
                   <ShopPhoto uri={shop.photo} style={styles.nearHero} fallbackColor={HERO_COLORS[shop.name] || HERO_COLORS.default}>
-                    {shop.openNow && (
-                      <View style={{ position: 'absolute', top: 8, right: 8, backgroundColor: 'rgba(0,180,0,0.85)', borderRadius: 10, paddingHorizontal: 7, paddingVertical: 2 }}>
-                        <Text style={{ fontSize: 9, color: '#fff', fontWeight: '600' }}>OPEN</Text>
-                      </View>
-                    )}
+ 
                   </ShopPhoto>
                   <View style={{ padding: 10 }}>
                     <Text style={styles.nearName} numberOfLines={1}>{shop.name}</Text>
@@ -535,10 +576,8 @@ function CategoryResultsScreen({ category, onBack, onShopPress, stamps }) {
 function CityScreen({ city, onBack, onShopPress, stamps }) {
   const [activeCat, setActiveCat] = useState('All');
   const [showFilter, setShowFilter] = useState(false);
-  const [openNowOnly, setOpenNowOnly] = useState(false);
   const data = SHOPS[city];
   let shops = activeCat === 'All' ? data.shops : data.shops.filter(s => s.tags.includes(activeCat));
-  if (openNowOnly) shops = shops.filter(s => s.openNow);
   return (
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <View style={styles.cityHeader}>
@@ -548,9 +587,7 @@ function CityScreen({ city, onBack, onShopPress, stamps }) {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
           <Text style={styles.cityHeaderTitle}>{data.flag} {city}</Text>
           <View style={{ flexDirection: 'row', gap: 8 }}>
-            <TouchableOpacity onPress={() => setOpenNowOnly(!openNowOnly)} style={[styles.openNowBtn, openNowOnly && styles.openNowBtnActive]}>
-              <Text style={[styles.openNowBtnText, openNowOnly && styles.openNowBtnTextActive]}>{openNowOnly ? '✓ Open' : 'Open now'}</Text>
-            </TouchableOpacity>
+ 
             <TouchableOpacity onPress={(e) => { e.stopPropagation && e.stopPropagation(); setShowFilter(!showFilter); }} style={[styles.filterBtn, activeCat !== 'All' && styles.filterBtnActive]}>
               <Text style={[styles.filterBtnText, activeCat !== 'All' && styles.filterBtnTextActive]}>{activeCat === 'All' ? '⊞  Filter' : `✓  ${activeCat}`}</Text>
             </TouchableOpacity>
@@ -583,7 +620,6 @@ function CityScreen({ city, onBack, onShopPress, stamps }) {
                     {shop.isNew && <View style={styles.newBadge}><Text style={styles.newBadgeText}>New</Text></View>}
                     {shop.isCultural && <View style={styles.cultBadge}><Text style={styles.cultBadgeText}>Cultural anchor</Text></View>}
                     {shop.isHiddenGem && <View style={styles.gemBadge}><Text style={styles.gemBadgeText}>💎 Gem</Text></View>}
-                    {shop.openNow && <View style={styles.openBadge}><Text style={styles.openBadgeText}>Open</Text></View>}
                   </View>
                   <Text style={styles.listSub}>{shop.hood} · {shop.tags.slice(0, 2).join(' · ')}</Text>
                 </View>
@@ -723,7 +759,6 @@ function DetailScreen({ city, shopName, onBack, stamps, onToggleStamp, saved, on
               {shop.isCultural && <View style={styles.cultBadge}><Text style={styles.cultBadgeText}>Cultural anchor</Text></View>}
               {shop.isNew && <View style={styles.newBadge}><Text style={styles.newBadgeText}>New</Text></View>}
               {shop.isHiddenGem && <View style={styles.gemBadge}><Text style={styles.gemBadgeText}>💎 Hidden gem</Text></View>}
-              {shop.openNow && <View style={styles.openBadge}><Text style={styles.openBadgeText}>Open now</Text></View>}
             </View>
             <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center' }}>
               <TouchableOpacity onPress={handleShare} style={styles.shareBtn}>
@@ -1126,10 +1161,6 @@ const styles = StyleSheet.create({
   nearRating: { fontSize: 10, fontWeight: '600', color: '#8B4A00', paddingHorizontal: 8, paddingBottom: 8, marginTop: 2 },
   gemCard: { width: 160, borderRadius: 16, overflow: 'hidden', borderWidth: 1, borderColor: '#F0F0F0' },
   gemHero: { height: 110 },
-  openNowBtn: { backgroundColor: '#F8F8F8', borderRadius: 20, paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderColor: '#E8E8E8' },
-  openNowBtnActive: { backgroundColor: '#0A8A0A', borderColor: '#0A8A0A' },
-  openNowBtnText: { fontSize: 11, fontWeight: '600', color: '#666' },
-  openNowBtnTextActive: { color: '#fff' },
   openBadge: { backgroundColor: '#E8F5E8', borderRadius: 8, paddingHorizontal: 6, paddingVertical: 1 },
   openBadgeText: { fontSize: 9, color: '#0A6A0A', fontWeight: '600' },
   gemBadge: { backgroundColor: '#F0EEFF', borderRadius: 8, paddingHorizontal: 6, paddingVertical: 1 },
