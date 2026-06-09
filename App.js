@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient } from '@supabase/supabase-js';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, Modal, KeyboardAvoidingView, Platform, Linking, Share, Image, ActivityIndicator } from 'react-native';
 import { useState, useRef, useEffect } from 'react';
-import { useFonts, PlayfairDisplay_700Bold, PlayfairDisplay_400Regular_Italic } from '@expo-google-fonts/playfair-display';
+
  
 const supabase = createClient(
   'https://truceujbjgpbearomzlr.supabase.co',
@@ -967,7 +967,7 @@ function NavBar({ active, onPress }) {
 }
  
 export default function App() {
-  const [fontsLoaded] = useFonts({ PlayfairDisplay_700Bold, PlayfairDisplay_400Regular_Italic });
+  
   const [screen, setScreen] = useState('splash');
   const [appReady, setAppReady] = useState(false);
   const [authMode, setAuthMode] = useState('signup');
@@ -1115,13 +1115,13 @@ export default function App() {
  
 const styles = StyleSheet.create({
   splash: { flex: 1, backgroundColor: '#E8D9C0', justifyContent: 'center', alignItems: 'center', gap: 10 },
-  splashLogo: { fontSize: 72, fontFamily: 'PlayfairDisplay_700Bold', color: '#1A0F07', letterSpacing: -2 },
+  splashLogo: { fontSize: 72, fontWeight: '700', color: '#1A0F07', letterSpacing: -2 },
   splashTag: { fontSize: 11, color: '#6A5040', letterSpacing: 2 },
   splashDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: '#8B4A00', marginTop: 10 },
   onboarding: { flex: 1, backgroundColor: '#fff' },
   onboardingHero: { height: 320, backgroundColor: '#E8D9C0', justifyContent: 'center', alignItems: 'center' },
   onboardingBody: { padding: 28, flex: 1 },
-  onboardingTitle: { fontSize: 32, fontFamily: 'PlayfairDisplay_400Regular_Italic', color: '#111', letterSpacing: -1, lineHeight: 38, marginBottom: 12 },
+  onboardingTitle: { fontSize: 32, fontWeight: '700', fontStyle: 'italic', color: '#111', letterSpacing: -1, lineHeight: 38, marginBottom: 12 },
   onboardingSub: { fontSize: 15, color: '#888', lineHeight: 22, marginBottom: 32 },
   onboardingBtnPrimary: { backgroundColor: '#1A0F07', borderRadius: 16, height: 54, justifyContent: 'center', alignItems: 'center', marginBottom: 12 },
   onboardingBtnPrimaryText: { color: '#F5E6C8', fontSize: 16, fontWeight: '600' },
@@ -1140,7 +1140,7 @@ const styles = StyleSheet.create({
   dividerLine: { flex: 1, height: 1, backgroundColor: '#F0F0F0' },
   dividerText: { fontSize: 13, color: '#CCC' },
   header: { backgroundColor: '#fff', paddingHorizontal: 22, paddingTop: 56, paddingBottom: 18, borderBottomWidth: 1, borderBottomColor: '#F5F0EC' },
-  logo: { fontSize: 42, fontFamily: 'PlayfairDisplay_400Regular_Italic', color: '#1A0F07', letterSpacing: -2, lineHeight: 48 },
+  logo: { fontSize: 42, fontWeight: '700', fontStyle: 'italic', color: '#1A0F07', letterSpacing: -2, lineHeight: 48 },
   logoTag: { fontSize: 10, color: '#BBB', letterSpacing: 2, marginTop: 2, textTransform: 'uppercase' },
   profileDot: { width: 40, height: 40, borderRadius: 20, backgroundColor: '#F5EFE6', borderWidth: 1.5, borderColor: '#C4B49A', justifyContent: 'center', alignItems: 'center' },
   searchBox: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#F8F8F8', borderRadius: 100, paddingHorizontal: 18, height: 46, gap: 10, marginTop: 18 },
@@ -1246,7 +1246,7 @@ const styles = StyleSheet.create({
   writeReviewBtn: { backgroundColor: '#F8F8F8', borderRadius: 14, height: 48, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#E8E8E8', marginBottom: 8 },
   writeReviewText: { fontSize: 14, fontWeight: '600', color: '#1A0F07' },
   passHeader: { backgroundColor: '#E8D9C0', paddingHorizontal: 22, paddingTop: 56, paddingBottom: 28, borderBottomWidth: 1, borderBottomColor: '#C4B49A', alignItems: 'flex-start' },
-  passLogo: { fontSize: 32, fontFamily: 'PlayfairDisplay_700Bold', color: '#1A0F07', letterSpacing: -1 },
+  passLogo: { fontSize: 32, fontWeight: '700', color: '#1A0F07', letterSpacing: -1 },
   passSub: { fontSize: 10, color: '#6A5040', letterSpacing: 2, marginTop: 4, textTransform: 'uppercase' },
   profileAvatar: { width: 72, height: 72, borderRadius: 36, backgroundColor: '#F5EFE6', borderWidth: 2, borderColor: '#C4B49A', justifyContent: 'center', alignItems: 'center', marginBottom: 12 },
   profileName: { fontSize: 24, fontWeight: '700', color: '#1A0F07', fontStyle: 'italic', letterSpacing: -0.5 },
